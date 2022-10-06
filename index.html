@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href={{ url_for('static', filename='style.css')
+}} /></head>
+<body>
+<h1>
+    Derrick's favorite books are:
+<ol>
+{%for i in range(0, len)%} 
+{% if books[i] == 'Philosophy' %}
+<li style="color:green;">{{books[i]}}</li>
+<div><img src="{{pic[i]}}" width="500" height="600"></img></div>
+{%else%}
+<li>{{books[i]}}</li>
+<div><img src="{{pic[i]}}" width="500" height="600"></img></div>
+{%endif%}
+{%endfor%}  
+</ol>
+</h1>
+</body>
+</html>
