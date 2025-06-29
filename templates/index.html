@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Here are some books related to the topic:</h1>
+    <ol>
+        {% for i in range(books|length) %}
+        <li>{{ books[i] }}</li>
+        <img src="{{ url_for('static', filename=pic[i]) }}" width="300" height="400" />
+        {% endfor %}
+
+    </ol>
+</body>
+</html>
